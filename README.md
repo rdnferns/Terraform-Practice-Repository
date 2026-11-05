@@ -92,6 +92,9 @@ Step-6: Finally execute the apply operation & observe the output.
 terraform apply
 ```
 <br>
+
+Note: This folder is used to help understand how variables, outputs & modules work & contribute towards building the cloud infrastructure using terraform.
+<br>
 <br>
 <br>
 <br>
@@ -138,5 +141,17 @@ Step-3: Then execute 'terraform apply' again & then observe the instructions as 
 terraform destroy
 ```
 <br>
+
+Note: when creating a S3 bucket, remember to give it a good bucket name as S3 buckets can be only given a original identifier, using a already used name will lead to it getting rejected during the building process. Also don't forget to review the S3 build code to understand how the AWS S3 bucket was built.
 <br>
+<br>
+<br>
+<br>
+
+# HCP_Terraform
+Step-1: First, login into HCP Terraform using this link https://app.terraform.io/login/new
+<br>
+<br>
+
+
 
