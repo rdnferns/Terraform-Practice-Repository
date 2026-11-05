@@ -91,3 +91,52 @@ Step-6: Finally execute the apply operation & observe the output.
 ```bash
 terraform apply
 ```
+<br>
+<br>
+<br>
+<br>
+
+# Terraform_Destroy
+Step-1: First execute the following set of commands, once you place these files in a new empty directory.
+```bash
+terraform fmt
+terraform init
+terraform plan
+terraform apply
+```
+<br>
+<br>
+
+Step-2: You should observe that a S3 bucket has been created, you can then proceed the comment the following lines of code in the main.tf file.
+```bash
+/*
+
+resource "aws_s3_bucket" "example" {
+  bucket = "bucky-is-bucket1999"
+
+  tags = {
+    Name = "Terraform-learn-buck"
+  }
+}
+.
+.
+.
+  depends_on = [aws_s3_bucket_public_access_block.secure_bucket_pab]
+}
+
+*/
+```
+<br>
+<br>
+
+Step-3: Then execute 'terraform apply' again & then observe the instructions as terraform removes the S3 bucket, then you can proceed to execute 'terraform destroy'
+```bash
+# -- Execute 'apply' to see how the S3 bucket specifically gets deleted by terraform in AWS
+# terraform apply
+
+# Then execute 'terraform destroy' to destroy the entire infrastructure in AWS
+terraform destroy
+```
+<br>
+<br>
+
