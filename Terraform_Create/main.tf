@@ -31,14 +31,12 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
-  key_name      = var.instance_key_pair
+  instance_type = t2.micro
+  key_name      = ArdWSkey
 
-  vpc_security_group_ids = [module.vpc.default_security_group_id]
-  subnet_id              = module.vpc.private_subnets[0]
 
   tags = {
-    name = var.instance_name
+    name = learn-terraform
   }
 }
 
