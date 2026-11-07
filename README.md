@@ -111,6 +111,9 @@ terraform apply
 <br>
 
 Step-2: You should observe that a S3 bucket has been created, you can then proceed the comment the following lines of code in the main.tf file.
+<br>
+
+
 ```bash
 /*
 
@@ -153,6 +156,103 @@ Step-1: First, login into HCP Terraform using this link https://app.terraform.io
 <br>
 <br>
 
-Step-2: Once, logged-in, create an organization, give it a proper name, then once you're done, you need to set your AWS Access Key & Secret Key into.
+Step-2: Once, logged-in, create an organization, give it a proper name, then once you're done, you need to set your AWS Access Key & Secret Key into the workspace variables trough the Workspace variables via Workspace page portal.
+<br>
+
+![Organization](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/assets.png)
+
+<br>
+
+![wrkspc_var](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/assets2.png)
+
+<br>
+<br>
+
+Step-3: Make the following changes to your terraform.tf file that helps with access to the HCP platform.
+```bash
+terraform {
+  cloud {
+    organization = "your-organization-name"
+
+    workspaces {
+      project = "Learn Terraform"
+      name = "learn-terraform-aws-get-started"
+    }
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.92"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
+```
+<br>
+<br>
+
+Step-4: execute terraform login & then generate a session token to access the HCP Terraform platform via CLI.
+```bash
+terraform login
+# They will ask for confirmation, type yes to move ahead & don't forget to use your authentication token generated to successfully complete the login
+```
+<br>
+
+This should be how your output should workout.
+```bash
+Retrieved token for user YOU
 
 
+---------------------------------------------------------------------------------
+
+                                        -                                
+                                        -----                           -
+                                        ---------                   --
+                                        ---------  -                -----
+                                        ---------  ------       -------
+                                            -------  ---------  ----------
+                                                ----  ---------- ----------
+                                                --  ---------- ----------
+   Welcome to HCP Terraform!                    -  ---------- -------
+                                                    ---  ----- ---
+   Documentation: terraform.io/docs/cloud           --------   -
+                                                    ----------
+                                                    ----------
+                                                    ---------
+                                                        -----
+                                                            -
+
+
+   New to HCP Terraform? Follow these steps to instantly apply an example configuration:
+
+   $ git clone https://github.com/hashicorp/tfc-getting-started.git
+   $ cd tfc-getting-started
+   $ scripts/setup.sh
+```
+<br>
+<br>
+
+Step-5: Once the login is a success, you can then proceed to execute the following commands in your CLI.
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+<br>
+
+If you check back in your HCP Terraform platform, you can observe that the project will now be set & created in the project, allowing users to use HCP to archive & collaborate their cloud work using Terraform.
+
+<br>
+
+Step-6: Execute terraform destroy to remove the underlying infrastructure in Terraform & HCP, also do not forget to remove the project & organization from your HCP Terraform account.
+```bash
+terraform destroy
+```
+<br>
+<br>
+<br>
+
+####### THE END ######
