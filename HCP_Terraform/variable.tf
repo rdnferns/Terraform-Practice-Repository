@@ -13,7 +13,7 @@ variable "instance_name" {
 variable "instance_key_pair" {
   description = "Variable that is used to assign a key-pair for the instance"
   type        = string
-  default     = "ArdWSkey"
+  default     = "YourPemkey"
 }
 
 
