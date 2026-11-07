@@ -31,7 +31,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = t2.micro
-  key_name      = ArdWSkey
+  key_name      = YourPemkey
 
   vpc_security_group_ids = [module.vpc.default_security_group_id]
   subnet_id              = module.vpc.private_subnets[0]
