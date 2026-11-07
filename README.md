@@ -32,7 +32,7 @@ terraform apply
 
 <br>
 
-Notes:- Please use your own personal Pem-Key in place of the one already in use in main.tf, also please use your own region in the provider.tf file
+Notes:- Please use your own personal Pem-Key in place of the one already in use in main.tf, also please use your own region in the provider.tf & other configuration files.
 <br>
 <br>
 <br>
