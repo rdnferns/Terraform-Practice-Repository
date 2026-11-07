@@ -117,6 +117,9 @@ terraform apply
 Step-2: You should observe that a S3 bucket has been created, you can then proceed the comment the following lines of code in the main.tf file.
 <br>
 
+![terra-dest-1](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_Destroy-1.png)
+
+<br>
 
 ```bash
 /*
@@ -147,6 +150,16 @@ Step-3: Then execute 'terraform apply' again & then observe the instructions as 
 # Then execute 'terraform destroy' to destroy the entire infrastructure in AWS
 terraform destroy
 ```
+<br>
+
+On Apply:
+![terra-apply](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_Destroy-4.png)
+
+<br>
+
+On Destroy:
+![terra-dest-full](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_Destroy-6.png)
+
 <br>
 
 Note: when creating a S3 bucket, remember to give it a good bucket name as S3 buckets can be only given a original identifier, using a already used name will lead to it getting rejected during the building process. Also don't forget to review the S3 build code to understand how the AWS S3 bucket was built.
