@@ -28,6 +28,10 @@ terraform apply
 ```
 <br>
 
+![create-ec2](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_create-2(Arden).png)
+
+<br>
+
 Notes:- Please use your own personal Pem-Key in place of the one already in use in main.tf, also please use your own region in the provider.tf file
 <br>
 <br>
