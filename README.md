@@ -272,4 +272,4 @@ terraform destroy
 <br>
 <br>
 
-#                                    -----THE END-----
+<div align="center">#-----THE END-----</div>
