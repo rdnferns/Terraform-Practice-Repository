@@ -153,6 +153,6 @@ Step-1: First, login into HCP Terraform using this link https://app.terraform.io
 <br>
 <br>
 
-Step-2: Once, logged-in, create an organization, give it a proper name, then once you're done.
+Step-2: Once, logged-in, create an organization, give it a proper name, then once you're done, you need to set your AWS Access Key & Secret Key into.
 
 
