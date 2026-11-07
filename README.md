@@ -28,7 +28,7 @@ terraform apply
 ```
 <br>
 
-![create-ec2](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_create-2(Arden).png)
+![create-ec2](https://github.com/rdnferns/Terraform-Practice-Repository/blob/main/Images/Terraform_create-2.png)
 
 <br>
 
